@@ -25,7 +25,7 @@
                             <a class="nav-link" href="#">Стена</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Друзья</a>
+                            <a class="nav-link" href="{{ route('friend.index') }}">Друзья</a>
                         </li>
 
                         <form class="form-inline my-2 ml-2 my-lg-0" method="get" action="{{ route('search.results') }}">
@@ -42,7 +42,7 @@
                                 {{ Auth::user()->getNameOrUsername() }}
                             </a>
                         </li>
-                        <li class="nav-item"><a href="" class="nav-link">Обновить профиль</a></li>
+                        <li class="nav-item"><a href="{{ route("profile.edit") }}" class="nav-link">Обновить профиль</a></li>
                         <li class="nav-item"><a href="{{ route('auth.logout') }}" class="nav-link">Выйти</a></li>
                     @else
                         <li class="nav-item"><a href="{{ route('auth.register') }}" class="nav-link">Зарегистрироваться</a></li>
